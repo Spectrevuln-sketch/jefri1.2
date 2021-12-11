@@ -1,0 +1,51 @@
+#home-pic {
+    width: 1300px;
+    height: 500px;
+    margin-top: 25px;
+}
+
+#input-group {
+    width: 500px;
+}
+
+.image1 {
+    float: right;
+    width: 575px;
+    height: 450px;
+    display: inline-block;
+}
+
+.work-earn {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: rgb(230, 26, 26);
+    text-shadow: 2px 2px 4px #f35de7;
+    text-decoration: none;
+}
+
+.image2 {
+    width: 575px;
+    height: 450px;
+}
+
+#checkbox {
+    float: left;
+}
+
+#build-community {
+    text-align: center;
+}
+
+#offer-commission {
+    text-align: center;
+}
+
+#publication-content {
+    text-align: center;
+}
+
+/* #international-support {
+    text-align: center;
+} */
+
+

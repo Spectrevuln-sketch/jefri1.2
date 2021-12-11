@@ -1,0 +1,86 @@
+#top-page {
+    background-color: rgb(207, 41, 41);
+    width: 2379px;
+    height: 800px;
+    position: absolute;
+}
+
+#bottom-page {
+    background-color: rgb(207, 41, 41);
+    width: 2379px;
+    height: 800px;
+    /* position: absolute; */
+    margin-top: 150px;
+}
+
+.publish {
+    color: white;
+    margin-top: 200px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #f35de7;
+    text-decoration: none;
+}
+
+#publication-img {
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-top: -15px;
+    margin-right: 10px;
+    /* margin-right: 10px; */
+}
+
+#bottom-img {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.addfiles {
+    color: white;
+    /* margin-top: 100px; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #f35de7;
+    text-decoration: none;
+}
+
+#bottom-text {
+    color: white;
+    margin-top: 50px;
+    /* margin-top: 200px; */
+}
+
+.image1 {
+    margin-left: 50px;
+}
+
+#publication {
+    margin-top: 200px;
+    margin-bottom: -200px;
+    color: white;
+}
+
+#publish-content {
+    text-align: center;
+    margin-top: 400px;
+}
+
+#text-h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.image {
+    width: 575px;
+    height: 450px;
+}
+
+.text {
+    color: rgb(230, 26, 26);
+    margin-top: 200px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #f35de7;
+    text-decoration: none;
+}

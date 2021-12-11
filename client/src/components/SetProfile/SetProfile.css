@@ -1,0 +1,44 @@
+#user-img {
+    width: 100%;
+    height: 500px
+}
+
+#submit-btn {
+    background-color: white;
+    border: none;
+}
+
+#bio {
+    height: 200px;
+    background-color: white;
+}
+
+#bio:hover {
+    border-bottom: 2px solid red;
+    background-color: gainsboro;
+}
+
+#select-category {
+    background-color: ghostwhite;
+    border: none;
+    width: 100%;
+    height: 50px
+}
+
+#select-category:hover {
+    border-bottom: 2px solid red;
+}
+
+#option-category {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 20px;
+}
+
+#card-edit {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+#card-edit:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}

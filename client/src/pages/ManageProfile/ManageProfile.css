@@ -1,0 +1,46 @@
+#btn-profile {
+    width: 100%;
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+#sidebar {
+    background-color: purple;
+    color: white;
+}
+
+#sidebar-full {
+    height: 1120px;
+    width: 15%;
+}
+
+#sidebar-btn {
+    width: 100%;
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+#sidebar-btn:hover {
+    background-color: rgb(231, 123, 231);
+}
+
+#sidebar-btn:focus {
+    background-color: rgb(195, 52, 52);
+}
+
+#sidebar-img{
+    float: left;
+}
+
+#sidebar-text {
+    text-align: center;
+}
+
+#onboarding {
+    float: right;
+    background-color: black;
+}

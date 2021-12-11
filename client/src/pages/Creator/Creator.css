@@ -1,0 +1,59 @@
+#creator-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+#creator-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+#btn-creator {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: gainsboro;
+    border: none;
+    color: black;
+}
+
+#btn-creator:focus {
+    background-color: red;
+    color: white;
+}
+
+#card-btn {
+    border: none;
+    background-color: white;
+    color: white;
+}
+
+#map-creator {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 1300px;
+    height: 130px;
+    background-color: rgb(117, 37, 128);
+}
+
+#map-creator:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+#user-pic {
+    border-radius: 50%;
+    height: 75px;
+    width: 100px;
+    float: left;
+}
+
+#follow {
+    margin-top: -75px
+}
+
+#btn-follow {
+    float: right;
+}
+
+#creator-desc {
+    /* color: black; */
+    float: left
+}

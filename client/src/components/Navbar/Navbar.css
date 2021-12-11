@@ -1,0 +1,80 @@
+.feature {
+    width: 500px;
+}
+
+.feature-img {
+    float: left;
+    margin-right: 10px;
+}
+
+#button {
+    width: 400px;
+    height: 50px;
+    position: absolute;
+    right: 25px;
+}
+
+.nav-text {
+    font-weight: bold;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.nav-text:hover {
+    background-color: #cc4444bd;
+    color: white;
+}
+
+.search-icon {
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.search-icon:hover {
+    background-color: #cc4444bd;
+    color: white;
+}
+
+#user-img {
+    float: right;
+}
+
+#user-name {
+    float: left;
+}
+
+#user-btn {
+    border: none;
+    background-color: whitesmoke;;
+}
+
+#user-btn:hover {
+    border: none;
+    background-color: gray;;
+}
+
+#nonuser-btn {
+    border: none;
+    background-color: whitesmoke;
+    border-radius: 50%;
+}
+
+#nonuser-btn:hover {
+    border: none;
+    background-color: gray;;
+}
+
