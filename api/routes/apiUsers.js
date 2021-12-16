@@ -55,4 +55,17 @@ router.get('/current-user-login', cors(CorsConfig.option), UserController.GetCur
 router.get('/kategori-kreator', cors(CorsConfig.option), UserController.GetKategoriData)
 /* -------------------------------------------------------------------------- */
 
+/** UPDATE USER DATA */
+router.post('/update-data-user/:user_email', cors(CorsConfig.option), UserController.UpdateNewDataUser)
+/** END UPDATE USER DATA */
+/** GET ROLE DATA */
+router.get('/get-roles', cors(CorsConfig.option), UserController.GETROLEDATA)
+/** END GET ROLE DATA */
+
+
+/** GET GENDER DATA */
+router.get('/get-genders', cors(CorsConfig.option), UserController.GETGENDERDATA)
+/** END GET GENDER DATA */
+
+
 module.exports = router

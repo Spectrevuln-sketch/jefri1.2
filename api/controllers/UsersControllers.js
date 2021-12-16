@@ -268,13 +268,65 @@ exports.GetKategoriData = async (req, res) => {
     await KategoriKreator.find({})
         .populate('categories')
         .then(data => {
-            console.log(data)
+            if (data) {
+                res.status(200).json(data)
+            } else {
+                res.status(404).send({ message: `Data Tidak Di Temukan` })
+            }
         }).catch(err => {
             console.log(err)
         })
 }
 /* -------------------------------------------------------------------------- */
 
+/* ---------------------------- UPDATE USER DATA ---------------------------- */
+exports.UpdateNewDataUser = async (req, res) => {
+    const { user_email } = req.params
+    const {
+        layout,
+        user_cat,
+        kategori_user
+    } = req.body
+
+    const FindRole = await RoleUser.findOne({ type: user_cat })
+    if (FindRole) {
+        await Users.findOneAndUpdate({ email_akun: user_email }, {
+            role: FindRole._id,
+            kategori: kategori_user,
+            layout: layout
+        }).then(data => {
+            res.status(200).send({ message: `Data Berhasil Di Tambahkan !` })
+        }).catch(err => {
+            console.log(err)
+            res.status(500).send({ message: `Terjadi Kesalahan Internal` })
+        })
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* ---------------------------- GET ALL ROLE DATA --------------------------- */
+exports.GETROLEDATA = async (req, res) => {
+    await RoleUser.find({})
+        .then(data => {
+            res.status(200).json(data)
+        }).catch(err => {
+            console.log(err)
+        })
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------- FIND ALL GENDER DATA -------------------------- */
+exports.GETGENDERDATA = async (req, res) => {
+    await Gender.find({})
+        .then(results => {
+            res.status(200).json(results)
+        }).catch(err => {
+            console.log(err)
+        })
+}
+/* -------------------------------------------------------------------------- */
 
 
 

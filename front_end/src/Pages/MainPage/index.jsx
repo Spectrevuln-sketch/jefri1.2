@@ -9,11 +9,13 @@ import {
     matchRoutes,
     useResolvedLocation,
     useParams,
+    Navigate
 } from "react-router-dom";
 // Pages
-import { HomePage, LoginPage, AboutPage, RegisterPage, UserSetupPage } from '../../Pages'
+import { HomePage, LoginPage, AboutPage, RegisterPage, UserSetupPage, SettingsPage, GeneralPage, ChangePasswordPage, BankSettingPage, OnBoarding, TipTab, MutationPage, WithdrawPage, MutationContent, LandingPage, CommisionsPage, CreatorPage } from '../../Pages'
+import MainDashboard from '../MainDashboard';
+import KomisiPage from '../KomisiPage';
 
-import { Navbar } from '../../Components';
 
 const MainPage = () => {
     const routes = [
@@ -30,7 +32,69 @@ const MainPage = () => {
         { path: '/login-user', element: <LoginPage /> },
         { path: '/register-user', element: <RegisterPage /> },
         { path: '/setup-user', element: <UserSetupPage /> },
+        {
+            path: '/belance',
+            element: <MutationPage />,
+            children: [
+                {
+                    path: 'withdraw',
+                    element: <WithdrawPage />
+                },
+                {
+                    path: 'mutation',
+                    element: <MutationContent />
+                }
+            ]
+        },
 
+        {
+            path: '/dashboard',
+            element: <MainDashboard />,
+            children: [
+                {
+                    path: 'onboard',
+                    element: <OnBoarding />
+                },
+                {
+                    path: 'tip',
+                    element: <TipTab />
+                },
+                {
+                    path: 'komisi',
+                    element: <KomisiPage />
+                },
+            ]
+        },
+        {
+            path: '/setting-page',
+            element: <SettingsPage />,
+            children: [
+                {
+                    path: 'general',
+                    element: <GeneralPage />
+                },
+                {
+                    path: 'password',
+                    element: <ChangePasswordPage />
+                },
+                {
+                    path: 'bank-setting',
+                    element: <BankSettingPage />
+                },
+            ]
+        },
+        {
+            path: "/landing",
+            element: <LandingPage />
+        },
+        {
+            path: "/commisions",
+            element: <CommisionsPage />
+        },
+        {
+            path: "/creators",
+            element: <CreatorPage />
+        },
     ]
     let element = useRoutes(routes);
     return (

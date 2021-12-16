@@ -158,19 +158,28 @@ var KategoriKreatorSchema = new Schema({
 });
 const KategoriKreator = mongoose.model("kategori_kreators", KategoriKreatorSchema);
 
+for (let i = 0; i < kategori.length; i++) {
+  const GenKategori = kategori[i];
 
-if (!KategoriKreator) {
-  kategori.map(data => {
-    const KategoriData = new KategoriKreator({
-      description: data.description,
-      eng_description: data.eng_description,
-      name: data.name,
-      status: data.status,
-      type: data.type,
+  KategoriKreator.find({})
+    .then(data => {
+
+      if (!data || data.length <= 0 || data === undefined) {
+        const KategoriData = new KategoriKreator({
+          description: GenKategori.description,
+          eng_description: GenKategori.eng_description,
+          name: GenKategori.name,
+          status: GenKategori.status,
+          type: GenKategori.type
+        })
+        KategoriData.save()
+      }
+
+    }).catch(err => {
+      console.log(err)
     })
-  })
-  KategoriData.save()
 }
+
 
 
 

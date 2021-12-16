@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import styled from "styled-components";
 import tw, { css } from "twin.macro";
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+
 // components
 import { ButtonBlock, LoginInput } from '../../Components'
 
@@ -16,9 +16,15 @@ text-blue-400
 `;
 
 const LoginPage = () => {
+    const navigate = useNavigate();
     // state
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    // params
+    const params = {
+        email: email
+    }
+    // navigate
 
 
 
@@ -63,7 +69,7 @@ const LoginPage = () => {
                         </div>
                         <ButtonBlock label="Sign In Now!" className="mat-focus-indicator button-padding text-green-600 bg-green-100 w-full mat-flat-button mat-button-base" style={{ fontSize: '18px' }} />
                         {/* delete Ths after production */}
-                        <Link to={'/setup-user'}> Next Page </Link>
+                        <Link to="/setup-user" state={email}> Next Page </Link>
                         {/* Enddelete Ths after production */}
                         <div _ngcontent-bis-c206 className="text-base mt-8 text-center">
                             <span _ngcontent-bis-c206>Don't have an account? </span>

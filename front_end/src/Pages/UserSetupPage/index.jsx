@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import tw, { css } from "twin.macro";
 import axios from 'axios'
 import { LoginInput, SelectInput } from '../../Components';
@@ -41,30 +41,22 @@ items-center
 `;
 
 const UserSetupPage = () => {
-    const cat = [
-        {
-            id: 15,
-            name: "3D Model",
-            description: null,
-            type: "Commission",
-            status: 1,
-            created_at: null,
-            updated_at: null,
-            eng_description: "",
-        }
-    ]
-
-
+    const navigate = useNavigate()
     const [penikmat_karya, setPenikmatKarya] = useState(true)
     const [kreator, setKreator] = useState(true)
     const [classCard, setClass] = useState(false)
     const [classCard1, setClass1] = useState(false)
+    const location = useLocation()
+    // get data
+    const [categories, setCategories] = useState([])
+    const [roles, setRole] = useState([])
+
+    // Update state
     const [layout, setLayout] = useState()
     const [user_cat, setUserCat] = useState('')
-    const [categories, setCategories] = useState([])
-
+    const [kategori_user, setKategoriUser] = useState('')
     /* ----------------------------- axios instance ----------------------------- */
-    var Api = axios.create({
+    var api = axios.create({
         baseURL: process.env.REACT_APP_USER_API,
         withCredentials: true
     })
@@ -73,7 +65,7 @@ const UserSetupPage = () => {
     const onCheckedPenikmat = async () => {
         setPenikmatKarya(!penikmat_karya)
         setKreator(true)
-        setUserCat("Penikmat")
+        setUserCat("Penikmat Karya")
     }
     const onCheckedKreator = async () => {
         setKreator(!kreator)
@@ -94,27 +86,49 @@ const UserSetupPage = () => {
 
     useEffect(() => {
         GetKategori()
+        GetRole()
     }, [])
 
-
+    /** GET DATA */
     const GetKategori = async () => {
-        await Api.get(`https://api.arxist.com/v3/categories`)
+        await api.get('/kategori-kreator')
             .then(res => {
                 if (res.status === 200) {
-                    setCategories(res.data.categories)
+                    setCategories(res.data)
                 }
             }).catch(err => {
                 console.log(err)
             })
     }
 
+    const GetRole = async () => {
+        await api.get('/get-roles')
+            .then(res => {
+                if (res.status === 200) {
+                    setRole(res.data)
+                }
+            }).catch(err => {
+                if (err) {
+                    console.log(err)
+                }
+            })
+    }
+
+    /** END GET DATA☻ */
+
 
 
     /* -------------------------------- send data ------------------------------- */
     const OnSubmitForm = async (e) => {
         e.preventDefault()
-        await Api.post('/update-user', {
-            layout
+        await api.post(`/update-data-user/${location.state}`, {
+            layout,
+            user_cat,
+            kategori_user
+        }).then(res => {
+            console.log(res)
+        }).catch(err => {
+            console.log(err)
         })
     }
 
@@ -163,14 +177,14 @@ const UserSetupPage = () => {
                                 <FormContainer hidden={kreator}>
                                     <Form>
                                         {/* Select Input */}
-                                        <SelectInput label="Kategori Kreator Kamu" optionDefault="Pilih Kategori" className="w-full text-gray-700 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-400 focus:text-gray-400" name="animals">
+                                        <SelectInput label="Kategori Kreator Kamu" optionDefault="Pilih Kategori" className="w-full text-gray-700 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-400 focus:text-gray-400" name="animals" onChange={(e) => setKategoriUser(e.target.value)}>
 
                                             {categories && (
                                                 categories.map(cat => {
                                                     return (
 
                                                         <option option value={cat.id}>
-                                                            {cat.type}
+                                                            {cat.name}
                                                         </option>
                                                     )
 
@@ -212,7 +226,7 @@ const UserSetupPage = () => {
                                 {/**/}
                                 <div _ngcontent-ynj-c138 className="flex justify-center ng-star-inserted">
                                     <button onClick={OnSubmitForm} type='submit' _ngcontent-ynj-c138 mat-flat-button color="primary" className="mat-focus-indicator mat-flat-button mat-button-base mat-primary mat-button-disabled" disabled="true">
-                                        <span className="mat-button-wrapper">
+                                        <span className="mat-button-wrapper" onClick={() => navigate('/setting-page')} >
                                             Simpan
                                         </span>
                                         <span matripple className="mat-ripple mat-button-ripple" /><span className="mat-button-focus-overlay" />

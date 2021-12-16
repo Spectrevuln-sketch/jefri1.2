@@ -17,10 +17,9 @@ import {
     Button,
     ButtonGroup
 } from 'reactstrap';
-import { stack as Menu } from 'react-burger-menu'
-import Sidebar from '../Sidebar/Sidebar';
 import '../Navbar/Navbar.css'
-import Marketplace from '../../pages/Marketplace/Marketplace';
+import '../Navbar/burger-menu.css'
+import { slide as Menu } from 'react-burger-menu'
 
 const NavBar = () => {
     var [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -117,7 +116,7 @@ const NavBar = () => {
                         <NavLink className="nav-text" href="/creator">Creator</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="/">
+                        <NavLink to="/">
                             <img className="search-icon" src="https://img.icons8.com/ios-filled/25/000000/search--v4.png" />
                         </NavLink >
                     </NavItem>
@@ -136,7 +135,18 @@ const NavBar = () => {
                             </Button>
                         </ButtonGroup>
                     </NavItem>
+
+                    <Menu
+                        right
+                        isOpen={true}
+                    >
+                        <a id="home" className="menu-item" href="/">Home</a>
+                        <a id="about" className="menu-item" href="/about">About</a>
+                        <a id="contact" className="menu-item" href="/contact">Contact</a>
+                        <a onClick={this.showSettings} className="menu-item--small" href="">Settings</a>
+                    </Menu>
                 </Nav>
+
             </Navbar>
         </>
     )

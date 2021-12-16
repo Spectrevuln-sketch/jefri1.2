@@ -24,9 +24,16 @@ var UsersSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: "roleusers"
     },
+    kategori: {
+        type: Schema.Types.ObjectId,
+        ref: "kategori_kreators"
+    },
     gender_akun: {
         type: Schema.Types.ObjectId,
         ref: "genders"
+    },
+    layout: {
+        type: Number,
     },
     pendukung_id: [{
         type: Schema.Types.ObjectId,
