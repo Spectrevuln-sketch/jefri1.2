@@ -46,7 +46,7 @@ const HeroBanner = () => {
                                 Sign up and get started today.
                             </p>
                             <div className="spacer-20" />
-                            <Link to="" className="btn-main bg-gradient-to-r from-red-300 to-blue-600">
+                            <Link to="/explore" className="btn-main bg-gradient-to-r from-red-300 to-blue-600">
                                 Explore
                             </Link>
                             &nbsp;&nbsp;
