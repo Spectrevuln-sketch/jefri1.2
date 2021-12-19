@@ -37,6 +37,10 @@ ConfigStore.redis.client = redisClient;
 //============================ End Redis Settings ===============================
 
 
+
+
+
+
 /** Route Config */
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -45,6 +49,23 @@ var apiUsers = require('./routes/apiUsers');
 
 
 var app = express();
+
+
+/** Session Setup */
+app.use(session({
+  store: new RedisStore({ client: ConfigStore.redis.client }),
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    secure: false, // if true only transmit cookie over https
+    httpOnly: false, // if true prevent client side JS from reading the cookie 
+    maxAge: 1000 * 60 * 10 // session max age in miliseconds
+  }
+}))
+/** Cors Setup */
+app.use(cors(CorsConfig.option))
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -64,20 +85,6 @@ app.use('/users', usersRouter);
 app.use('/apiUsers', apiUsers);
 // ────────────────────────────────────────────────────────────────────────────────
 
-/** Session Setup */
-app.use(session({
-  store: new RedisStore({ client: ConfigStore.redis.client }),
-  secret: process.env.SESSION_SECRET,
-  resave: false,
-  saveUninitialized: false,
-  cookie: {
-    secure: false, // if true only transmit cookie over https
-    httpOnly: false, // if true prevent client side JS from reading the cookie 
-    maxAge: 1000 * 60 * 10 // session max age in miliseconds
-  }
-}))
-/** Cors Setup */
-app.use(cors(CorsConfig.option))
 
 
 // catch 404 and forward to error handler

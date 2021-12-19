@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Navbar } from '../../Components'
 
 const HomePage = () => {
@@ -15,33 +16,26 @@ const HomePage = () => {
                             <div _ngcontent-qub-c105 className="w-full md:w-7/12 lg:w-7/12 xl:w-5/12 pt-4 md:pt-0">
                                 <div _ngcontent-qub-c105 className="font-black gradient-text text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl"> Berkarya &amp; Dapatkan Penghasilan. </div>
                                 <div _ngcontent-qub-c105 className="mt-4 opacity-60 leading-relaxed text-sm lg:text-base">
-                                    <p _ngcontent-qub-c105> Tanpa menggabungkan banyak aplikasi seperti Patreon untuk donasi, Fiverr untuk komisi, Deviantart untuk portofolio. Langsung kumpulkan pemujamu dalam satu halaman di Arxist. </p>
-                                    <p _ngcontent-qub-c105 className="mt-4"> Ayo bergabung bersama komunitas kreator Arxist untuk dapatkan lebih banyak penggemar dan penghasilan. </p>
+                                    <p _ngcontent-qub-c105> Tanpa menggabungkan banyak aplikasi seperti Patreon untuk donasi, Fiverr untuk komisi, Deviantart untuk portofolio. Langsung kumpulkan pemujamu dalam satu halaman di Flex </p>
+                                    <p _ngcontent-qub-c105 className="mt-4"> Ayo bergabung bersama komunitas kreator Flex untuk dapatkan lebih banyak penggemar dan penghasilan. </p>
                                 </div>
                             </div>
                             <div _ngcontent-qub-c105 className="ml-auto">
-                                <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/landing_mobile.png" alt="" className="w-full md:w-64 xl:w-96" />
+                                <img _ngcontent-qub-c105 src="https://images.unsplash.com/photo-1639429193032-e012eda23c8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" className="w-full md:w-64 xl:w-96" />
                             </div>
                         </div>
                         <div _ngcontent-qub-c105 className="text container">
                             <div _ngcontent-qub-c105 className="w-full lg:w-10/12 mx-auto my-8 lg:my-16">
                                 <div _ngcontent-qub-c105 className="flex">
                                     <div _ngcontent-qub-c105 className="flex items-center w-full px-4 text-base rounded-md bg-gray-100 mr-4 h-11 lg:h-14">
-                                        <div _ngcontent-qub-c105 className="text-sm lg:text-base font-bold">arxist.com/</div>
+                                        <div _ngcontent-qub-c105 className="text-sm lg:text-base font-bold">Flexcom/</div>
                                         <input _ngcontent-qub-c105 type="text" autoComplete="off" placeholder="coolcreatorname" className="placeholder-gray-400 text-sm lg:text-base py-4 outline-none h-full border-none w-full ng-untouched ng-pristine ng-valid" style={{ background: 'transparent' }} />
-                                    </div>
-                                    <div _ngcontent-qub-c105 className="flex-shrink-0">
-                                        <button _ngcontent-qub-c105 mat-flat-button color="primary" className="mat-focus-indicator h-full text-sm lg:text-base mat-flat-button mat-button-base mat-primary">
-                                            <span className="mat-button-wrapper">Daftarkan</span>
-                                            <span matripple className="mat-ripple mat-button-ripple" />
-                                            <span className="mat-button-focus-overlay" />
-                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div _ngcontent-qub-c105 className="text container">
-                            <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/creator_profile.png" alt="" className="w-full" />
+                            <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Flex _ Bisa Komisi, Terima Donasi _ Tip melalui Flex_files/creator_profile.png" alt="" className="w-full" />
                         </div>
                         <div _ngcontent-qub-c105 id="community" className="w-full bg-red-50 pt-20 pb-8 md:pb-16">
                             <div _ngcontent-qub-c105 className="text container">
@@ -49,13 +43,13 @@ const HomePage = () => {
                                     <div _ngcontent-qub-c105 className="gradient-text font-black text-2xl md:text-3xl">Bangun Komunitas Pemuja Kamu.</div>
                                     <div _ngcontent-qub-c105 className="leading-relaxed mt-4 text-sm md:text-base"> Ubah para <b _ngcontent-qub-c105>Penggemarmu</b> menjadi <b _ngcontent-qub-c105>Pemuja</b> dengan mengajak mereka memberikan tip / donasi kepadamu agar kamu terus semangat berkarya. </div>
                                 </div>
-                                <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/tip_horizontal.png" alt="" className="w-full mt-8" />
+                                <img _ngcontent-qub-c105 src="#" alt="" className="w-full mt-8" />
                                 <div _ngcontent-qub-c105 className="mt-4">
-                                    <a _ngcontent-qub-c105 mat-flat-button color="accent" routerlink="/tip-feature" className="mat-focus-indicator mat-flat-button mat-button-base mat-accent" tabIndex={0} aria-disabled="false" href="https://arxist.com/tip-feature">
+                                    <Link _ngcontent-qub-c105 mat-flat-button color="accent" routerlink="/tip-feature" className="mat-focus-indicator mat-flat-button mat-button-base mat-accent" tabIndex={0} aria-disabled="false" to="#">
                                         <span className="mat-button-wrapper">Selengkapnya tentang Tip / Donasi</span>
                                         <span matripple className="mat-ripple mat-button-ripple" />
                                         <span className="mat-button-focus-overlay" />
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -63,33 +57,33 @@ const HomePage = () => {
                             <div _ngcontent-qub-c105 className="text container">
                                 <div _ngcontent-qub-c105 className="w-full lg:w-10/12">
                                     <div _ngcontent-qub-c105 className="gradient-text font-black text-2xl md:text-3xl">Tawarkan Komisi Kreatif.</div>
-                                    <div _ngcontent-qub-c105 className="leading-relaxed mt-4 text-sm md:text-base"> Kreator terutama para seniman masih mengandalkan komisi / jasa untuk mendapatkan penghasilan. Di Arxist kamu bisa menjamin pelangganmu bahwa komisimu aman dari penipuan dengan <b _ngcontent-qub-c105>Escrow System</b> arxist. </div>
+                                    <div _ngcontent-qub-c105 className="leading-relaxed mt-4 text-sm md:text-base"> Kreator terutama para seniman masih mengandalkan komisi / jasa untuk mendapatkan penghasilan. Di Flex kamu bisa menjamin pelangganmu bahwa komisimu aman dari penipuan dengan <b _ngcontent-qub-c105>Escrow System</b> Flex </div>
                                 </div>
                                 <div _ngcontent-qub-c105 className="lg:w-9/12 mx-auto">
-                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/commission.png" alt="" className="w-full mt-8" />
+                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Flex _ Bisa Komisi, Terima Donasi _ Tip melalui Flex_files/commission.png" alt="" className="w-full mt-8" />
                                 </div>
                                 <div _ngcontent-qub-c105 className="mt-8">
                                     <div _ngcontent-qub-c105 className="w-full lg:w-10/12">
                                         <div _ngcontent-qub-c105 className="gradient-text font-bold text-xl md:text-2xl">Tambahan, Dukungan Internasional.</div>
-                                        <div _ngcontent-qub-c105 className="leading-relaxed mt-4 text-sm md:text-base"> Pakai Arxist untuk keperluan lokal maupun internasional tanpa perlu pindah platform. Bahkan mayoritas transaksi komisi di Arxist datang dari Internasional. </div>
+                                        <div _ngcontent-qub-c105 className="leading-relaxed mt-4 text-sm md:text-base"> Pakai Flex untuk keperluan lokal maupun internasional tanpa perlu pindah platform. Bahkan mayoritas transaksi komisi di Flex datang dari Internasional. </div>
                                     </div>
                                     <div _ngcontent-qub-c105 className="mt-4">
                                         <div _ngcontent-qub-c105 className="flex mb-2">
                                             <div _ngcontent-qub-c105 className="w-6 flex-shrink-0">
-                                                <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/checklist.png" alt="" className="w-full" />
+                                                <img _ngcontent-qub-c105 src="" alt="" className="w-full" />
                                             </div>
                                             <div _ngcontent-qub-c105 className="ml-4 font-bold"> Pilihan Bahasa </div>
                                         </div>
                                         <div _ngcontent-qub-c105 className="flex">
                                             <div _ngcontent-qub-c105 className="w-6 flex-shrink-0">
-                                                <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/checklist.png" alt="" className="w-full" />
+                                                <img _ngcontent-qub-c105 src="" alt="" className="w-full" />
                                             </div>
                                             <div _ngcontent-qub-c105 className="ml-4 font-bold"> Pemisah Harga Lokal &amp; Internasional </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div _ngcontent-qub-c105 className="mt-4">
-                                    <a _ngcontent-qub-c105 mat-flat-button color="accent" routerlink="/commission-feature" className="mat-focus-indicator mat-flat-button mat-button-base mat-accent" tabIndex={0} aria-disabled="false" href="https://arxist.com/commission-feature">
+                                    <a _ngcontent-qub-c105 mat-flat-button color="accent" routerlink="/commission-feature" className="mat-focus-indicator mat-flat-button mat-button-base mat-accent" tabIndex={0} aria-disabled="false" href="https://Flexcom/commission-feature">
                                         <span className="mat-button-wrapper">Selengkapnya tentang Komisi</span>
                                         <span matripple className="mat-ripple mat-button-ripple" />
                                         <span className="mat-button-focus-overlay" />
@@ -101,26 +95,26 @@ const HomePage = () => {
                             <div _ngcontent-qub-c105 className="text container">
                                 <div _ngcontent-qub-c105 className="w-full lg:w-10/12">
                                     <div _ngcontent-qub-c105 className="gradient-text font-black text-2xl md:text-3xl">Publikasi Karya &amp; Konten Eksklusif.</div>
-                                    <div _ngcontent-qub-c105 className="leading-relaxed mt-4 text-sm md:text-base"> Berikan Konten-konten gratis ataupun berbayar dalam satu platform. Seluruh konten yang terpublikasi secara publik akan tersambung dengan seluruh sub-produk Arxist untuk dijelajahi oleh lebih banyak orang. </div>
+                                    <div _ngcontent-qub-c105 className="leading-relaxed mt-4 text-sm md:text-base"> Berikan Konten-konten gratis ataupun berbayar dalam satu platform. Seluruh konten yang terpublikasi secara publik akan tersambung dengan seluruh sub-produk Flex untuk dijelajahi oleh lebih banyak orang. </div>
                                 </div>
                                 <div _ngcontent-qub-c105 className="relative py-4">
                                     <div _ngcontent-qub-c105 id="floating-image">
-                                        <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/books.png" alt="" className="absolute z-10 w-8 img-books" />
-                                        <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/coffee.png" alt="" className="absolute z-10 w-8 img-coffee" />
-                                        <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/console.png" alt="" className="absolute z-10 w-8 img-console" />
-                                        <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/camera.png" alt="" className="absolute z-10 w-8 img-camera" />
-                                        <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/guitar.png" alt="" className="absolute z-10 w-8 img-guitar" />
+                                        <img _ngcontent-qub-c105 src="" alt="" className="absolute z-10 w-8 img-books" />
+                                        <img _ngcontent-qub-c105 src="" alt="" className="absolute z-10 w-8 img-coffee" />
+                                        <img _ngcontent-qub-c105 src="" alt="" className="absolute z-10 w-8 img-console" />
+                                        <img _ngcontent-qub-c105 src="" alt="" className="absolute z-10 w-8 img-camera" />
+                                        <img _ngcontent-qub-c105 src="" alt="" className="absolute z-10 w-8 img-guitar" />
                                     </div>
                                     <div _ngcontent-qub-c105 className="lg:w-9/12 mx-auto">
-                                        <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/publication.png" alt="" className="w-full mt-8" />
+                                        <img _ngcontent-qub-c105 src="" alt="" className="w-full mt-8" />
                                     </div>
                                 </div>
                                 <div _ngcontent-qub-c105 className="mt-4">
-                                    <a _ngcontent-qub-c105 mat-flat-button color="accent" routerlink="/tip" className="mat-focus-indicator mat-flat-button mat-button-base mat-accent" tabIndex={0} aria-disabled="false" href="https://arxist.com/tip">
+                                    <Link to="/tip" _ngcontent-qub-c105 mat-flat-button color="accent" className="mat-focus-indicator mat-flat-button mat-button-base mat-accent" tabIndex={0} aria-disabled="false" href="https://Flexcom/tip">
                                         <span className="mat-button-wrapper">Selengkapnya tentang Publikasi</span>
                                         <span matripple className="mat-ripple mat-button-ripple" />
                                         <span className="mat-button-focus-overlay" />
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -212,25 +206,25 @@ const HomePage = () => {
                         </div>
                         <div _ngcontent-qub-c105 id="payment" className="py-12">
                             <div _ngcontent-qub-c105 className="text container flex flex-col items-center">
-                                <div _ngcontent-qub-c105 className="gradient-text font-black text-2xl md:text-3xl">Metode Bayar di Arxist</div>
+                                <div _ngcontent-qub-c105 className="gradient-text font-black text-2xl md:text-3xl">Metode Bayar di Flex</div>
                                 <div _ngcontent-qub-c105 className="payment-list flex flex-wrap items-center justify-center">
-                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/bni-logo-200.png" alt="" />
-                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/bri-logo-200.png" alt="" />
-                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/permata-logo-200.png" alt="" />
-                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/mandiri-logo-200.png" alt="" />
-                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/ovo-logo-200.png" alt="" />
-                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/dana-logo-200.png" alt="" />
-                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/gopay-logo-200.png" alt="" />
-                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/linkaja-logo-200.png" alt="" className="lj" />
-                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/alfamart-logo-200.png" alt="" />
-                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/shopeepay-logo-200.png" alt="" />
+                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Flex _ Bisa Komisi, Terima Donasi _ Tip melalui Flex_files/bni-logo-200.png" alt="" />
+                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Flex _ Bisa Komisi, Terima Donasi _ Tip melalui Flex_files/bri-logo-200.png" alt="" />
+                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Flex _ Bisa Komisi, Terima Donasi _ Tip melalui Flex_files/permata-logo-200.png" alt="" />
+                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Flex _ Bisa Komisi, Terima Donasi _ Tip melalui Flex_files/mandiri-logo-200.png" alt="" />
+                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Flex _ Bisa Komisi, Terima Donasi _ Tip melalui Flex_files/ovo-logo-200.png" alt="" />
+                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Flex _ Bisa Komisi, Terima Donasi _ Tip melalui Flex_files/dana-logo-200.png" alt="" />
+                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Flex _ Bisa Komisi, Terima Donasi _ Tip melalui Flex_files/gopay-logo-200.png" alt="" />
+                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Flex _ Bisa Komisi, Terima Donasi _ Tip melalui Flex_files/linkaja-logo-200.png" alt="" className="lj" />
+                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Flex _ Bisa Komisi, Terima Donasi _ Tip melalui Flex_files/alfamart-logo-200.png" alt="" />
+                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Flex _ Bisa Komisi, Terima Donasi _ Tip melalui Flex_files/shopeepay-logo-200.png" alt="" />
                                 </div>
                                 <h3 _ngcontent-qub-c105 className="mt-8 text-center">International</h3>
                                 <div _ngcontent-qub-c105 className="payment-list flex flex-wrap items-center justify-center">
-                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/mastercard-logo.svg" alt="" style={{ width: '50px' }} />
-                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/jcb-logo.svg" alt="" style={{ width: '50px' }} />
-                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/visa-logo.svg" alt="" style={{ width: '50px' }} />
-                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Arxist _ Bisa Komisi, Terima Donasi _ Tip melalui Arxist_files/amex-logo.png" alt="" style={{ width: '50px' }} />
+                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Flex _ Bisa Komisi, Terima Donasi _ Tip melalui Flex_files/mastercard-logo.svg" alt="" style={{ width: '50px' }} />
+                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Flex _ Bisa Komisi, Terima Donasi _ Tip melalui Flex_files/jcb-logo.svg" alt="" style={{ width: '50px' }} />
+                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Flex _ Bisa Komisi, Terima Donasi _ Tip melalui Flex_files/visa-logo.svg" alt="" style={{ width: '50px' }} />
+                                    <img _ngcontent-qub-c105 src="./Dapatkan Penghasilan melalui Flex _ Bisa Komisi, Terima Donasi _ Tip melalui Flex_files/amex-logo.png" alt="" style={{ width: '50px' }} />
                                 </div>
                             </div>
                         </div>

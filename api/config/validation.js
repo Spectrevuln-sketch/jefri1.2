@@ -11,7 +11,6 @@ exports.validate = (method) => {
                     .notEmpty().withMessage('Username / Email Tidak Boleh Kosong !'),
                 check('password')
                     .notEmpty().withMessage('Password tidak boleh kosong !')
-                    .isLength({ min: 5 }).withMessage('Password Minimal 5 Karakter !')
             ]
         }
     }
@@ -22,19 +21,17 @@ exports.validate = (method) => {
                 check('username')
                     .notEmpty().withMessage('Username Harus Di isi !')
                     .custom(username => {
-                        return Users.findOne({ where: { username: username } }).then(result => {
+                        return Users.findOne({ username: username }).then(result => {
                             if (result) {
                                 return Promise.reject('Username Sudah Di Gunakan');
                             }
                         })
                     }),
-                check('nama_akun')
-                    .notEmpty().withMessage('Nama Harus Di isi !'),
-                check('email_akun')
+                check('email')
                     .notEmpty().withMessage('Email Harus Di isi !')
                     .isEmail().withMessage('Format Email Salah !')
                     .custom(email => {
-                        return Users.findOne({ where: { email_akun: email } }).then(result => {
+                        return Users.findOne({ email_akun: email }).then(result => {
                             if (result) {
                                 return Promise.reject('Email Sudah Di Gunakan');
                             }

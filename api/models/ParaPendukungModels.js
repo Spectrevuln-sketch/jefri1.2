@@ -16,5 +16,5 @@ var ParaPendukungSchema = new Schema({
 }, {
     timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }
 });
-const ParaPendukung = mongoose.model("para_pendukung", ParaPendukungSchema);
+const ParaPendukung = mongoose.model("pendukung", ParaPendukungSchema);
 module.exports = { ParaPendukung }

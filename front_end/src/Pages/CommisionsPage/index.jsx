@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom'
 import { SearchIcon } from '@heroicons/react/outline'
 
 // components
-import { Navbar } from '../../Components'
 
 
 const Background = tw.div`
@@ -15,7 +14,6 @@ bg-blue-400
 const CommisionPage = () => {
     return (
         <>
-            <Navbar />
             <div _ngcontent-bis-c206 id="template" className="pb-12">
                 <Background _ngcontent-bis-c206 className="bg-red-floating" style={{ zIndex: -2 }} />
                 <div className='flex flex-row justify-between items-center mx-24'>

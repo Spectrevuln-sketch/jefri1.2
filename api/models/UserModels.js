@@ -35,6 +35,12 @@ var UsersSchema = new Schema({
     layout: {
         type: Number,
     },
+    image_background: {
+        type: String,
+    },
+    image_profile: {
+        type: String,
+    },
     pendukung_id: [{
         type: Schema.Types.ObjectId,
         ref: "para_pendukung"
@@ -42,7 +48,8 @@ var UsersSchema = new Schema({
     komisi_id: [{
         type: Schema.Types.ObjectId,
         ref: "komisi_user"
-    }]
+    }],
+    publikasi: []
 }, {
     timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }
 });
